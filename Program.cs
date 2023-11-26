@@ -2,17 +2,31 @@
 
 string[] exampleArray = {"What", "do", "you", "people", "want", "from", "me?"};
 string[] inputArray;
+string[] outputArray;
 
-Console.WriteLine("Program launch. Use example array? Y / N");
-bool useExample = GetInfo();
+Work();
 
-bool GetInfo()
+void Work()
+{
+    Console.WriteLine("Program launch. Use example array? Y / N");
+    bool useExample = GetBool();
+
+    inputArray = useExample ? exampleArray : GetArray();
+
+    Console.WriteLine();
+    ShowArray(inputArray, "Input array");
+
+    outputArray = WorkWithArray();
+
+    ShowArray(outputArray, "Output array");
+}
+
+bool GetBool()
 {
     string res = Console.ReadLine();
     bool check = res == "Y" || res == "N";
     while (!check)
-    {        
-        Console.WriteLine($"entered: {res}, {check}");
+    {
         Console.WriteLine("Incorrect input. Enter Y / N");
         res = Console.ReadLine();
         check = res == "Y" || res == "N";
@@ -20,38 +34,37 @@ bool GetInfo()
     return res == "Y";
 }
 
-if (useExample)
+void ShowArray(string[] array, string name)
 {
-    inputArray = exampleArray;
-}
-else
-{
-
-    Console.WriteLine("Enter string array:");
-    inputArray = GetArray(Console.ReadLine());
-}
-
-
-
-
-Console.WriteLine("Entered array:");
-for (int i = 0; i < inputArray.Length; i++)
-{
-    Console.WriteLine(i + ": " + inputArray[i]);
-}
-Console.WriteLine();
-
-string[] outputArray = WorkWithArray(inputArray);
-
-Console.WriteLine("Output Array:");
-for (int i = 0; i < outputArray.Length; i++)
-{
-    Console.WriteLine(i + ": " + outputArray[i]);
+    Console.WriteLine($"{name}:");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine($"{i}: {array[i]}");
+    }
+    Console.WriteLine();
 }
 
-string[] GetArray(string input) => input.Split(' ');
+string[] GetArray()
+{
+    string[] res= Array.Empty<string>();
+    int counter = 1;
 
-string[] WorkWithArray(string[] input)
+    bool finish = false;
+    while (!finish)
+    {
+        Console.WriteLine();
+        Console.WriteLine($"Enter string element #{counter - 1}");
+        Array.Resize(ref res, counter);
+        res[counter - 1] = Console.ReadLine();
+        counter++;
+
+        Console.WriteLine("Do you finish? Enter Y / N");
+        finish = GetBool();
+    }    
+    return res;
+}
+
+string[] WorkWithArray()
 {
     string[] res = Array.Empty<string>();
     int counter = 1;
