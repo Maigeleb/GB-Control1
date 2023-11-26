@@ -1,0 +1,14 @@
+C:\Git\GB-Control1\bin\Debug\net8.0\GB-Control1.exe
+C:\Git\GB-Control1\bin\Debug\net8.0\GB-Control1.deps.json
+C:\Git\GB-Control1\bin\Debug\net8.0\GB-Control1.runtimeconfig.json
+C:\Git\GB-Control1\bin\Debug\net8.0\GB-Control1.dll
+C:\Git\GB-Control1\bin\Debug\net8.0\GB-Control1.pdb
+C:\Git\GB-Control1\obj\Debug\net8.0\GB-Control1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\GB-Control1\obj\Debug\net8.0\GB-Control1.AssemblyInfoInputs.cache
+C:\Git\GB-Control1\obj\Debug\net8.0\GB-Control1.AssemblyInfo.cs
+C:\Git\GB-Control1\obj\Debug\net8.0\GB-Control1.csproj.CoreCompileInputs.cache
+C:\Git\GB-Control1\obj\Debug\net8.0\GB-Control1.dll
+C:\Git\GB-Control1\obj\Debug\net8.0\refint\GB-Control1.dll
+C:\Git\GB-Control1\obj\Debug\net8.0\GB-Control1.pdb
+C:\Git\GB-Control1\obj\Debug\net8.0\GB-Control1.genruntimeconfig.cache
+C:\Git\GB-Control1\obj\Debug\net8.0\ref\GB-Control1.dll
