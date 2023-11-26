@@ -1,7 +1,38 @@
 ﻿// Написать программу, которая из имеющегося массива строк формирует новый массив из строк, длина которых меньше, либо равна 3 символам
 
-Console.WriteLine("Enter string array:");
-string[] inputArray = GetArray(Console.ReadLine());
+string[] exampleArray = {"What", "do", "you", "people", "want", "from", "me?"};
+string[] inputArray;
+
+Console.WriteLine("Program launch. Use example array? Y / N");
+bool useExample = GetInfo();
+
+bool GetInfo()
+{
+    string res = Console.ReadLine();
+    bool check = res == "Y" || res == "N";
+    while (!check)
+    {        
+        Console.WriteLine($"entered: {res}, {check}");
+        Console.WriteLine("Incorrect input. Enter Y / N");
+        res = Console.ReadLine();
+        check = res == "Y" || res == "N";
+    }
+    return res == "Y";
+}
+
+if (useExample)
+{
+    inputArray = exampleArray;
+}
+else
+{
+
+    Console.WriteLine("Enter string array:");
+    inputArray = GetArray(Console.ReadLine());
+}
+
+
+
 
 Console.WriteLine("Entered array:");
 for (int i = 0; i < inputArray.Length; i++)
